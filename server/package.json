@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "request": "^2.88.2",
+    "utf-8-validate": "^6.0.3",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js && nodemon ws.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8"
+  }
+}
