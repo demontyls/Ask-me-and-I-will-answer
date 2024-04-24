@@ -15,7 +15,7 @@ class MessagesController {
       const collection = getMessageCollection();
       const { content, id } = req.body;
       collection.push(new Message(content, id));
-      fs.writeFileSync('../bd/messageCollection.json', JSON.stringify(collection));
+      fs.writeFileSync('../db/messageCollection.json', JSON.stringify(collection));
       res.send({isPosted: true});
     } catch (error) {
       res.send({error: error});
@@ -24,7 +24,7 @@ class MessagesController {
   deleteMessage = async (req, res) => {
     try {
       const collection = getMessageCollection().filter(elem => elem.id !== req.query.id);
-      fs.writeFileSync('../bd/messageCollection.json', JSON.stringify(collection));
+      fs.writeFileSync('../db/messageCollection.json', JSON.stringify(collection));
       res.send({isDelete: true});
     } catch (error) {
       res.send({error: error});
